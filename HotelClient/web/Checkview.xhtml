@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:jsf="http://xmlns.jcp.org/jsf">
+    <h:head>
+        <title>Facelet Title</title>
+        <link rel="stylesheet" href="Mystyle.css"/>
+    </h:head>
+    <h:body>
+       <div class="image-box">
+  <div class="text">
+      <h1 style="font-size:20px"> Welcome Again Dear <b><h:outputLabel class="form-control" value="#{bookingbean.booking.name}" /> </b>To Luxury<br></br>Hotel</h1>
+    <p>Here are the best booking Room and we give the best </p>
+    <a href="Home.xhtml" class="btnLink">Return Home</a>
+  </div>
+</div>
+        <div class="booking-form-check">
+            <br></br>
+            <h2 style="margin-left: 80px;">Your Person Detail</h2>
+            <h:form>
+                <h:outputLabel class="label">Your Name</h:outputLabel><br></br>
+                <h:inputText class="form-control" value="#{bookingbean.booking.name}" /><br></br>
+               <h:outputLabel class="label">Passport/ID</h:outputLabel><br></br>
+               <h:inputText class="form-control" value="#{bookingbean.booking.passid}" /><br></br>
+                <h:outputLabel class="label">Arrival</h:outputLabel><br></br>
+                <input type="date"  jsf:value="#{bookingbean.booking.arrival}"/><br></br>
+               <h:outputLabel class="label">Departure</h:outputLabel><br></br>
+               <input type="date"  jsf:value="#{bookingbean.booking.dep}"/><br></br>
+                <h:outputLabel class="label">Adults</h:outputLabel><br></br>
+                <h:selectOneMenu class="select" value="#{bookingbean.booking.adult}">
+                        <f:selectItem itemValue="1" itemLabel="1 Adult"/>
+                          <f:selectItem itemValue="2" itemLabel="2 Adults"/>
+                            <f:selectItem itemValue="3" itemLabel="3 Adults"/>
+                              <f:selectItem itemValue="4" itemLabel="4 Adults"/>
+                                <f:selectItem itemValue="5" itemLabel="5 Adults"/>
+                                  <f:selectItem itemValue="6" itemLabel="6 Adults"/>
+                                    <f:selectItem itemValue="7" itemLabel="7 Adults"/>
+                                      <f:selectItem itemValue="8" itemLabel="8 Adults"/>
+                                        <f:selectItem itemValue="9" itemLabel="9 Adults"/>
+                                          <f:selectItem itemValue="10" itemLabel="10 Adults"/>
+                 </h:selectOneMenu><br></br>
+                <h:outputLabel class="label">Children</h:outputLabel><br></br>
+                <h:selectOneMenu class="select" value="#{bookingbean.booking.children}">
+                    <f:selectItem itemValue="0" itemLabel="0 Children"/>
+                        <f:selectItem itemValue="1" itemLabel="1 Children"/>
+                          <f:selectItem itemValue="2" itemLabel="2 Childrens"/>
+                            <f:selectItem itemValue="3" itemLabel="3 Childrens"/>
+                              <f:selectItem itemValue="4" itemLabel="4 Childrens"/>
+                                <f:selectItem itemValue="5" itemLabel="5 Childrens"/>
+                                  <f:selectItem itemValue="6" itemLabel="6 Childrens"/>
+                                    <f:selectItem itemValue="7" itemLabel="7 Childrens"/>
+                                      <f:selectItem itemValue="8" itemLabel="8 Childrens"/>
+                                        <f:selectItem itemValue="9" itemLabel="9 Childrens"/>
+                                          <f:selectItem itemValue="10" itemLabel="10 Childrens"/>
+                       </h:selectOneMenu><br></br><br></br>
+                       <div class="buttons">
+                           <h:commandButton class="btn btn-primary" value="Change" action="#{bookingbean.update()}"/>
+                           <h:commandButton class="btn btn-primary" value="Cancel" action="#{bookingbean.delete(bookingbean.booking.passid)}"/>
+                       </div>
+            </h:form>
+        </div>
+    </h:body>
+     <style>
+        .btnLink {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: black;
+  background-color: #04AA6D;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+b{
+    color:  #04AA6D;
+    font-family: sans-serif;
+    font-size: 30px;
+}
+.booking-form-check{
+      width: 25%;
+    background: #ffff;
+    height: 670px;
+    margin-left: 970px;
+    margin-top: -705px;
+    border-radius: 7px;
+}
+.buttons{
+     display: grid;
+     gap: 4px 20px;
+}
+       .btnLink {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: black;
+  background-color: #04AA6D;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 3px;
+}
+    </style>
+</html>
+

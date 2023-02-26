@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+        <link rel="stylesheet" href="Mystyle.css"/>
+    </h:head>
+    <h:body>
+           <div class="image-box">
+      
+  
+</div>
+       
+        <div class="view-details-check">
+             <hr></hr>
+             <br></br>
+             <h2 style="margin-left: 80px;">Enter Your Id to view <br></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;your booking</h2>
+             <h:form>
+                 <h:inputText class="form-control" value="#{bookingbean.booking.passid}" /><br></br>
+             <br></br>
+             <div class="buttons">
+                 <h:commandButton id="btnApprove" value="Enter Id" action="#{bookingbean.findCheck(bookingbean.booking.passid)}"/>
+              </div>
+             </h:form>
+        </div>
+    </h:body>
+     <style>
+    .view-details-check{
+    width: 27%;
+    background: white;
+    height: 300px;
+    margin-left: 560px;
+    margin-top: -655px;
+   
+}
+hr{
+    width: 99.6%;
+    height: 1rem;
+    background-color: #04AA6D;
+    
+}
+td{
+    padding: 8px 0px;
+}
+.label-view{
+     margin: 0 85px;   
+}
+.view-details h2{
+    margin-left: 90px;
+}
+#btnApprove{
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 50px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+   margin: 0 45px;
+}
+.buttons{
+    display: grid;
+     gap: 4px 20px;
+}
+    </style>
+</html>
+
